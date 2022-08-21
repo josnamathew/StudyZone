@@ -8,13 +8,18 @@ Double Click HERE to edit this markdown cell and write answers.
 
 Numbers: Integers form numbers
 
-Strings: alphabets, letters
+**
+Integers - whole numbers
+Floating point - numbers with a decimal
+**
 
-Lists: collection of ordered or unordered numbers and strings
+Strings: alphabets, letters **Ordered sequence of characters**
 
-Tuples: Immutable list
+Lists: collection of ordered or unordered numbers and strings **Ordered sequence of objects (mutable)**
 
-Dictionaries:key value pair
+Tuples: Immutable list **ordered sequence of objects (immutable)**
+
+Dictionaries:key value pair **Key-value pair that is unordered**
 
 Numbers
 Write an equation that uses multiplication, division, an exponent, addition, and subtraction that is equal to 100.25.
@@ -36,8 +41,9 @@ What is the type of the result of the expression 3 + 1.5 + 4? float
 
 What would you use to find a number’s square root, as well as its square?
 
-# Square root: **
-# Square:
+# Square root: **  ANS: Something to the power of 0.5 => 10 ** 0.5
+# Square: ANS: ** 2 => 10 ** 2
+
 Strings
 Given the string 'hello' give an index command that returns 'e'. Enter your code in the cell below:
 
@@ -63,8 +69,8 @@ s ='hello'
 Lists
 Build this list [0,0,0] two separate ways.
 
-# Method 1: list1 = [0] list1 + list1 + list1
-# Method 2: list1 * 3
+# Method 1: list1 = [0] list1 + list1 + list1 ANS: [0] * 3
+# Method 2: list1 * 3                         ANS: list2 = [0,0,0] list2
 
 Reassign 'hello' in this nested list to say 'goodbye' instead:
 
@@ -75,7 +81,7 @@ list3[2][2] = 'Goodbye'
 
 Sort the list below:
 
-list4 = [5,3,4,6,1]
+list4 = [5,3,4,6,1]   Another method: sorted(list4)
 list4.sort()
 
 Dictionaries
@@ -93,14 +99,15 @@ d['k1']['k2']
 d = {'k1':[{'nest_key':['this is deep',['hello']]}]}
 #Grab hello
 
-d['k1'][0]['nest_key'][1]
+d['k1'][0]['nest_key'][1] ANS: d['k1'][0]['nest_key'][1][0]  
 
 # This will be hard and annoying!
 d = {'k1':[1,2,{'k2':['this is tricky',{'tough':[1,2,['hello']]}]}]}
-d['k1'][2]['k2'][1]['tough'][2]
+
+d['k1'][2]['k2'][1]['tough'][2]       ANS: d['k1'][2]['k2'][1]['tough'][2][0]
 
 Can you sort a dictionary? Why or why not?
-No, since key value pair
+No, since key value pair **Normal dictionaries are mappings not sequence**
 
 Tuples
 What is the major difference between tuples and lists?

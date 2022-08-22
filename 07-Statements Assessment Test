@@ -13,7 +13,9 @@ for i in x:
   else:
     continue
 
-Use range() to print all the even numbers from 0 to 10.
+Use range() to print all the even numbers from 0 to 10. ANS: list(range(0,11,2))
+ANS: for num in range(0,11,2)
+print(num)
 
 #Code Here
 for i in range(0,10):
@@ -23,6 +25,7 @@ for i in range(0,10):
     continue
 
 Use a List Comprehension to create a list of all numbers between 1 and 50 that are divisible by 3.
+ANS: list5 = [i for i in range(1,51) if i%3 ==0]
 
 #Code in this cell
 list5 = [i for i in range(1,50) if i%3 ==0]
@@ -38,7 +41,7 @@ for i in x:
 
 Write a program that prints the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number, and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
 
-#Code in this cell
+#Code in this cell ANS - range(1,101)
 
 for i in range(1,100):
   if i%3 == 0 and i%5 == 0:

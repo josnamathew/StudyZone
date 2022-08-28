@@ -282,6 +282,17 @@ spy_game([1,2,4,0,0,7,5])
 spy_game([1,0,2,4,0,5,7])
 # Check
 spy_game([1,7,2,0,4,5,0])
+
+Solution:
+
+def spy_game(a):
+  code = [0,0,7,'x']
+  for i in a:
+    if i == code[0]:
+      code.pop(0)
+  return len(code) ==1
+ 
+=====================================================================================
 COUNT PRIMES: Write a function that returns the number of prime numbers that exist up to and including a given number
 count_primes(100) --> 25
 
@@ -292,6 +303,12 @@ def count_primes(num):
                 
 # Check
 count_primes(100)
+
+Solution:
+
+
+
+=============================================================================================================
 Just for fun:
 PRINT BIG: Write a function that takes in a single letter, and returns a 5x5 representation of that letter
 print_big('a')
@@ -307,4 +324,7 @@ For purposes of this exercise, it's ok if your dictionary stops at "E".
 def print_big(letter):
     pass
 print_big('a')
+
+Solution:
+
 Great Job!

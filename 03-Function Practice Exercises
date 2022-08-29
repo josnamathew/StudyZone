@@ -306,6 +306,21 @@ count_primes(100)
 
 Solution:
 
+def count_primes2(num):
+    primes = [2]
+    x = 3
+    if num < 2:
+        return 0
+    while x <= num:
+        for y in primes:  # use the primes list!
+            if x%y == 0:
+                x += 2
+                break
+        else:
+            primes.append(x)
+            x += 2
+    print(primes)
+    return len(primes)
 
 
 =============================================================================================================
@@ -325,6 +340,75 @@ def print_big(letter):
     pass
 print_big('a')
 
-Solution:
+Solution: Tough one
+
+def print_big(letter):
+    patterns = {1:'  *  ',2:' * * ',3:'*   *',4:'*****',5:'**** ',6:'   * ',7:' *   ',8:'*   * ',9:'*    '}
+    alphabet = {'A':[1,2,4,3,3],'B':[5,3,5,3,5],'C':[4,9,9,9,4],'D':[5,3,3,3,5],'E':[4,9,4,9,4]}
+    for pattern in alphabet[letter.upper()]:
+        print(patterns[pattern])
 
 Great Job!
+
+
+====================================================================
+
+My own : Print character such as line 1 as one char, 2nd line has 2 char, 3rd line has 3 chars and so on.
+
+def print_big(a):
+  for i in range(0,5):
+  #  print('entered i loop')
+   # print('i value is {}'.format(i))
+    for j in range(1,i+2):
+      pass
+    #  print('entered j loop')
+     # print('j value is {}'.format(j))
+    print(a*j)
+    #print('going to next for loop')
+    
+    
+print_big('*')
+*
+**
+***
+****
+*****
+
+=======================================================================
+
+My Own : Inverted chars
+
+def inverted():
+  for i in range(5):
+    for j in range(i,5):
+      print("*", end="")
+    print()
+    
+inverted()
+*****
+****
+***
+**
+*
+
+============================================================
+
+My Own : Pyramid
+
+def pyramid():
+  for i in range(5):
+ #   print('value of i is {}'.format(i))
+    for s in range(-6,-i):
+  #    print('Value of s is {}'.format(s))
+      print(" ", end="")
+    for j in range(i+1):
+   #   print('Value for j is {}'.format(j))
+      print("* ",end = "")
+    print()
+    
+pyramid()
+      * 
+     * * 
+    * * * 
+   * * * * 
+  * * * * * 

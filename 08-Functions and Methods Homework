@@ -11,6 +11,15 @@ def vol(rad):
 # Check
 vol(2)
 33.49333333333333
+
+Solution:
+import math
+
+def vol(rad):
+  return ((4/3) * math.pi * rad**3)
+
+
+===============================================================================================
 Write a function that checks whether a number is in a given range (inclusive of high and low)
 
 def ran_check(num,low,high):
@@ -24,6 +33,16 @@ def ran_bool(num,low,high):
     pass
 ran_bool(3,1,10)
 True
+
+Solution:
+def ran_check(num,low,high):
+  if num > low and  num < high:
+    print("{} is in the range".format(num))
+  else:
+    print("out of range")
+
+
+======================================================================================================================
 Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
 
 Sample String : 'Hello Mr. Rogers, how are you this fine Tuesday?'
@@ -42,6 +61,28 @@ up_low(s)
 Original String :  Hello Mr. Rogers, how are you this fine Tuesday?
 No. of Upper case characters :  4
 No. of Lower case Characters :  33
+
+Solution:
+
+def is_up_low(s):
+
+  word = s.split()
+
+  newword = ''.join(word)
+
+  low =0
+  up = 0
+
+  for i in newword:
+    if i.islower() == True:
+      low +=1
+    else:
+      up +=1
+
+  print("Number of lowercase letters {}".format(low))
+  print("Number of uppercase letters {}".format(up))
+
+========================================================================================================
 Write a Python function that takes a list and returns a new list with unique elements of the first list.
 
 Sample List : [1,1,1,1,2,2,3,3,3,3,4,5]
@@ -50,6 +91,21 @@ def unique_list(lst):
     pass
 unique_list([1,1,1,1,2,2,3,3,3,3,4,5])
 [1, 2, 3, 4, 5]
+
+Solution:
+def uniq_list(lst):
+
+  list1 = []
+
+  for i in lst:
+    if i not in list1:
+      list1.append(i)
+    else:
+      pass
+  return list1
+
+
+=============================================================================
 Write a Python function to multiply all the numbers in a list.
 
 Sample List : [1, 2, 3, -4]
@@ -58,6 +114,16 @@ def multiply(numbers):
     pass
 multiply([1,2,3,-4])
 -24
+
+Solution:
+def multiply(lst):
+  num = 1
+  for i in lst:
+    num = num * i
+  return num
+
+
+=================================================================================================
 Write a Python function that checks whether a word or phrase is palindrome or not.
 
 Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam,kayak,racecar, or a phrase "nurses run". Hint: You may want to check out the .replace() method in a string to help out with dealing with spaces. Also google search how to reverse a string in Python, there are some clever ways to do it with slicing notation.
@@ -66,7 +132,13 @@ def palindrome(s):
     pass
 palindrome('helleh')
 True
+Solution:
+def palin(word):
+    return word == word[::-1]
+
+==================================================================================================================================
 Hard:
+
 Write a Python function to check whether a string is pangram or not. (Assume the string passed in does not have any punctuation)
 
 Note : Pangrams are words or sentences containing every letter of the alphabet at least once.
@@ -86,4 +158,17 @@ ispangram("The quick brown fox jumps over the lazy dog")
 True
 string.ascii_lowercase
 'abcdefghijklmnopqrstuvwxyz'
+
+Solution:
+def ispangram(str1,alphabet=string.ascii_lowercase):
+  str2 = str1.replace(" ","")
+  str2 = str2.lower()
+  
+  alphaset = set(alphabet)
+
+  strset = set(str2)
+
+  return alphaset == strset
+  
+
 Great Job!

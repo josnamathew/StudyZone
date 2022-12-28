@@ -1,0 +1,57 @@
+##Run the game
+
+print ('Welcome to Tic Tac Toe Game')
+
+while True:
+  ##Set eveyrything up
+  the_board = [' ']*10
+  turn = choose_first()
+  player1_marker, player2_marker = player_input()
+  play_game = input('Ready to play? Type y or n')
+
+  ##Game Play
+  if play_game == 'y':
+    game_on = True
+  else:
+    game_on = False
+
+    while game_on:
+
+      ##Player1 turn
+      if turn == 'Player 1':
+        display_board(the_board)
+        position = player_choice(the_board)
+        place_marker(the_board,player1_marker,position)
+        ##Check if won
+        if win_check(the_board,player1_marker):
+          display_board(the_board)
+          print('Player1 won!!')
+          game_on = False
+        else:
+          if full_board_check(the_board):
+            display_board(the_board)
+            print('Its a tie!')
+            game_on = False
+          else:
+            turn = 'Player 2'
+
+      ##Player 2 turn
+      else:
+        display_board(the_board)
+        position = player_choice(the_board)
+        place_marker(the_board,player2_marker,position)
+        ##Check if won
+        if win_check(the_board,player2_marker):
+          display_board(the_board)
+          print('Player2 won!!')
+          game_on = False
+        else:
+          if full_board_check(the_board):
+            display_board(the_board)
+            print('Its a tie!')
+            game_on = False
+          else:
+            turn = 'Player 1'
+
+        if not replay():
+          break

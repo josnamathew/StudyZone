@@ -10,7 +10,7 @@ class Account:
 
   def deposit(self,amount):
 
-    self.bal = self.bal + amount
+    self.bal = self.bal + amount                           // self.balance += amount
     print("{} has been deposited".format(amount))
 
   def withdraw(self,amount):

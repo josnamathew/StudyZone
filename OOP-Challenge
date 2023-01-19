@@ -1,0 +1,43 @@
+class Account:
+
+  def __init__(self,acc_name,bal):
+
+    self.acc_name = acc_name
+    self.bal = bal
+
+  def __str__(self):
+    return f"Name: {self.acc_name} and Balance : {self.bal}"
+
+  def deposit(self,amount):
+
+    self.bal = self.bal + amount
+    print("{} has been deposited".format(amount))
+
+  def withdraw(self,amount):
+
+    if amount > self.bal:
+      print("Insufficient Funds")
+
+    else:
+      self.bal = self.bal - amount
+      print("{} had been withdrawn".format(amount))
+
+==============================================================
+
+acct1=Account('Jose',100)
+Name: Jose and Balance : 100
+
+acct1.acc_name
+Jose
+
+acct1.bal
+100
+
+acct1.deposit(50)
+50 has been deposited
+
+acct1.withdraw(75)
+75 had been withdrawn
+
+acct1.withdraw(500)
+Insufficient Funds
